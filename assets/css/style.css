@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #090a0f;
+  color: #f4f4f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 440px;
+  width: 100%;
+  background: #10121a;
+  border: 1px solid #222638;
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  font-size: 42px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Elementos da página index.html */
+.price-tag {
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 25px 0;
+}
+
+.price-tag .label {
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.price-tag .value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #f4f4f5;
+  margin-top: 4px;
+}
+
+.buy-btn {
+  display: inline-block;
+  width: 100%;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.15s ease;
+}
+
+.buy-btn:hover {
+  background: #3b82f6;
+}
+
+.footer-note {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 20px;
+}
+
+/* Elementos da página sucesso.html */
+.spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(37, 99, 235, 0.1);
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
