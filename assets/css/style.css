@@ -1,4 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Cores da sua Paleta */
+  --color-cream:   #F6EDDC;
+  --color-sand:    #E3E5D7;
+  --color-mint:    #BDD6D2;
+  --color-sage:    #A5C8CA;
+  --color-slate:   #586875;
+  
+  /* Mapeamento de UI */
+  --bg-global:     #586875;
+  --bg-card:       #E3E5D7;
+  --text-main:     #586875;
+  --text-light:    #6b7d8c;
+  --text-white:    #F6EDDC;
+  --accent:        #A5C8CA;
+  --accent-hover:  #BDD6D2;
+}
 
 *, *::before, *::after { 
   box-sizing: border-box; 
@@ -8,103 +26,181 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #090a0f;
-  color: #f4f4f5;
+  background-color: var(--bg-global);
+  color: var(--text-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER ESTRUTURADO */
+.main-header {
+  background-color: rgba(43, 52, 60, 0.2);
+  border-bottom: 1px solid rgba(246, 237, 220, 0.1);
+  padding: 16px 24px;
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 20px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  color: var(--color-cream);
+}
+
+.logo-text .weight-regular {
+  font-weight: 400;
+  color: var(--color-mint);
+}
+
+.badge-status {
+  font-size: 11px;
+  background-color: rgba(246, 237, 220, 0.15);
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: var(--color-cream);
+  font-weight: 500;
+}
+
+/* ÁREA DE CONTEÚDO PRINCIPAL */
+.main-content {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
+/* CARD COM DESIGN ESCANDINAVO MÍNIMO */
 .container {
   max-width: 440px;
   width: 100%;
-  background: #10121a;
-  border: 1px solid #222638;
-  border-radius: 12px;
-  padding: 40px 30px;
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 45px 35px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
-.icon {
-  font-size: 42px;
-  color: #2563eb;
-  margin-bottom: 20px;
+.icon-lock {
+  font-size: 40px;
+  margin-bottom: 18px;
+  display: inline-block;
 }
 
-h1 {
-  font-size: 22px;
+.container h1 {
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 12px;
-  letter-spacing: -0.02em;
+  color: var(--text-main);
+  margin-bottom: 14px;
+  letter-spacing: -0.03em;
 }
 
-p {
-  color: #94a3b8;
+.container p {
+  color: var(--text-light);
   font-size: 14px;
   line-height: 1.6;
+  font-weight: 400;
 }
 
-/* Elementos da página index.html */
+/* ELEMENTOS DO CHECKOUT */
 .price-tag {
-  background: rgba(37, 99, 235, 0.05);
-  border: 1px solid rgba(37, 99, 235, 0.15);
-  padding: 16px;
-  border-radius: 8px;
-  margin: 25px 0;
+  background-color: rgba(88, 104, 117, 0.06);
+  border: 1px solid rgba(88, 104, 117, 0.12);
+  padding: 18px;
+  border-radius: 10px;
+  margin: 30px 0;
 }
 
 .price-tag .label {
   font-size: 11px;
-  color: #94a3b8;
+  color: var(--text-light);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  font-weight: 500;
 }
 
 .price-tag .value {
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 700;
-  color: #f4f4f5;
+  color: var(--text-main);
   margin-top: 4px;
+  letter-spacing: -0.02em;
 }
 
 .buy-btn {
   display: inline-block;
   width: 100%;
-  background: #2563eb;
-  color: #ffffff;
+  background-color: var(--color-slate);
+  color: var(--color-cream);
   text-decoration: none;
-  padding: 14px;
-  border-radius: 8px;
+  padding: 16px;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 15px;
-  transition: background 0.15s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(88, 104, 117, 0.2);
 }
 
 .buy-btn:hover {
-  background: #3b82f6;
+  background-color: #47545f;
+  transform: translateY(-1px);
 }
 
-.footer-note {
+.security-note {
   font-size: 11px;
-  color: #64748b;
-  margin-top: 20px;
+  color: var(--text-light);
+  margin-top: 18px;
 }
 
-/* Elementos da página sucesso.html */
+/* ELEMENTOS DA PÁGINA DE SUCESSO / LOADING */
 .spinner {
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  border: 3px solid rgba(37, 99, 235, 0.1);
-  border-top-color: #2563eb;
+  width: 44px;
+  height: 44px;
+  border: 3px solid rgba(88, 104, 117, 0.1);
+  border-top-color: var(--color-slate);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 20px;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 24px;
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+/* RODAPÉ ESTRUTURADO */
+.main-footer {
+  background-color: rgba(43, 52, 60, 0.1);
+  border-top: 1px solid rgba(246, 237, 220, 0.05);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container p {
+  font-size: 12px;
+  color: rgba(246, 237, 220, 0.4);
+}
+
+.footer-container .footer-sub {
+  font-size: 11px;
+  margin-top: 4px;
+  color: rgba(246, 237, 220, 0.25);
 }
